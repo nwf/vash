@@ -30,10 +30,10 @@ public class PolarTheta extends OperationNode {
 	
 	private PolarTheta(Position center, Wrapping angle) {
 		super(2, 0);
-		assert(this.center.hasBounds(-1, -1, 1, 1));
-		assert(this.angle.hasBounds(-1, 1));
 		_values[0] = this.center = center;
 		_values[1] = this.angle = angle;
+		assert(this.center.hasBounds(-1, -1, 1, 1));
+		assert(this.angle.hasBounds(-1, 1));
 	}
 	
 	public PolarTheta(double x, double y, double angle) {
